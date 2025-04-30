@@ -1,6 +1,14 @@
-// Obtener elementos del DOM
-const verDetallesButton = document.getElementById('verDetalles');
-const volverButton = document.getElementById('volver');
+// Seleccionamos los elementos necesarios
 const tarjeta = document.querySelector('.tarjeta');
-// Función para voltear la tarjeta
-// Función para volver a la cara frontal
+const botonVerDetalles = document.getElementById('verDetalles');
+const botonVolver = document.getElementById('volver');
+
+// Agregar evento para voltear la tarjeta
+botonVerDetalles.addEventListener('click', () => {
+    tarjeta.classList.add('volteada');
+});
+
+// Agregar evento para regresar la tarjeta
+botonVolver.addEventListener('click', () => {
+    tarjeta.classList.remove('volteada');
+});
